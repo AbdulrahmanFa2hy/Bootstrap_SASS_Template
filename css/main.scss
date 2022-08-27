@@ -1,0 +1,186 @@
+// Define New Variables
+$dark-color: #19283F;
+$alt-color: #0A58B5;
+$green-color:#27D1CC;
+$red-color: #FF3150;
+$yellow-color: #FFC400;
+$section-color: #EFF7FA;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  background-color: $dark-color;
+}
+.search {
+  border-left: 1px solid $green-color;
+  svg {
+    color: $green-color;
+  }
+}
+.main-btn {
+  background-color: $red-color;
+  color: $yellow-color;
+  &:hover {
+    color: #ffdb65;
+    background-color: #eb0f30 ;
+  }
+}
+
+.nav-link {
+  color: white;
+  &.active, &:hover{
+    color: $green-color !important;
+  }
+}
+.navbar .navbar-toggler{
+  color: white;
+  font-size: 25px;
+  border-color: white;
+  &:focus {
+    box-shadow: none;
+  }
+  &[aria-expanded='true']{
+    border-color: $green-color;
+  }
+}
+.landing {
+  background-color: $dark-color;
+  min-height: calc(100vh - 72px);
+}
+.main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background-color: $green-color;
+}
+.features {
+  .icon-holder {
+    height: 200px;
+    svg {
+      left: 50% ;
+      transform: translateX(-50%);
+    }
+    .num {
+      font-size: 12rem;
+      color: $section-color;
+    } 
+    .pencil {
+      font-size: 60px;
+      color: $green-color;
+    }
+  }
+  h4 {
+    color: $yellow-color;
+  }
+}
+.our-works {
+  background-color: $section-color;
+  ul {
+    li {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      &.active {
+        background-color: $red-color;
+        color: white;
+      }
+      &:not(.active):hover {
+        color: $red-color;
+      }
+    }
+  }
+  .box {
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: attr(data-work);
+      position: absolute;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      background-color: rgba(39, 209, 204, 0.75);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(calc(-100% - 5px));
+      transition: all .3s ease;
+    }
+    &:hover::before{
+      transform: translateX(0);
+    }
+  }
+}
+.stuf {
+  .container > p {
+    max-width: 500px;
+  }
+}
+.team {
+  background-color: $section-color;
+  h2 {
+    color: $yellow-color;
+  }
+  .card h4 {
+    background-color: $green-color;
+  }
+}
+.project {
+  background-color: $dark-color;
+}
+.subscribe {
+  background-color: $yellow-color;
+  [type='submit'] {
+    background-color: $dark-color;
+    color: $yellow-color;
+    &:hover {
+      color: $yellow-color;
+    }
+  }
+  [type='email'] {
+      border: none;
+      border-bottom: 1px solid white;
+      color: white;
+    &::placeholder {
+      color: white;
+    }
+    &:focus {
+      background-color: $yellow-color;
+      outline: none;
+    }
+  }
+}
+.footer {
+  background-color: $dark-color;
+  .brand {
+    color: $green-color;
+  }
+  .copyright span{
+    color: $yellow-color;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .facebook {
+    background-color: #1877F2;
+  }
+  .twitter {
+    background-color: #1DA1F2;
+  }
+  .linkedin {
+    background-color: #0077B5;
+  }
+  .youtube {
+    background-color: #FF0000;
+  }
+}
